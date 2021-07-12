@@ -53,11 +53,13 @@ public class BaseActivity extends Activity implements View.OnClickListener {
      */
     @Override
     public void onClick(View v) {
-        int id = v.getId();
-        if (id == R.id.buttonOptionA) {
-            startIntent(targetForOptionA);
-        } else if (id == R.id.buttonOptionB) {
-            startIntent(targetForOptionB);
+        switch (v.getId()) {
+            case R.id.buttonOptionA:
+                startIntent(targetForOptionA);
+                break;
+            case R.id.buttonOptionB:
+                startIntent(targetForOptionB);
+                break;
         }
     }
 
